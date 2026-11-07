@@ -36,7 +36,6 @@ Unduh `creditcard.csv` dari Kaggle dan simpan sebagai `data/creditcard.csv`
 | 5. Loss function, dropout, batch normalization, Adam/RMSProp, LR scheduling, early stopping | `src/model.py`, `src/train.py` |
 | 6. Evaluasi (accuracy, precision, recall, F1, confusion matrix) + iterasi perbaikan | `src/evaluate.py`, `src/select_final.py`, `src/plots.py` |
 | 7. Dokumentasi arsitektur, hyperparameter, hasil eksperimen | Laporan PDF, `notebooks/`, `outputs/results/` |
-| Luaran (b) video presentasi/demo | dikumpulkan bersama laporan di Microsoft Teams |
 | Luaran (c) notebook + instruksi + anggota | `notebooks/Proyek_Deteksi_Fraud_DNN.ipynb`, README ini |
 | Luaran (d) source code lengkap | `src/`, `app/` |
 
@@ -111,14 +110,11 @@ cd ..
 streamlit run app/app.py
 ```
 
-## Deployment (Streamlit Community Cloud)
+## Menjalankan aplikasi
 
-1. Unggah repositori ini ke GitHub (publik). Folder `outputs/models/` wajib ikut terunggah.
-2. Buka [share.streamlit.io](https://share.streamlit.io), masuk dengan akun GitHub.
-3. *Create app* → pilih repositori, branch `main`, main file path `app/app.py` → *Deploy*.
-4. Streamlit membaca `requirements.txt` dan menyiapkan lingkungan secara otomatis.
-5. Uji aplikasi: centang **Gunakan contoh data uji** di tab *Unggah CSV*.
-
-Repositori: https://github.com/worldff/credit-card-fraud-dnn · Link aplikasi: `https://[nama-aplikasi].streamlit.app` · Link video demo: `[isi link]`
+Aplikasi Streamlit dijalankan secara lokal dengan `streamlit run app/app.py`, lalu dibuka di
+browser (`http://localhost:8501`). Untuk mencoba, centang **Gunakan contoh data uji** pada tab
+*Unggah CSV*, atau pilih salah satu contoh pada tab *Input manual*. Repositori ini juga dapat
+di-deploy langsung ke Streamlit Community Cloud dengan main file path `app/app.py`.
 
 Semua angka di laporan berasal dari `outputs/results/all_results.json` (seed 42 untuk model final).
